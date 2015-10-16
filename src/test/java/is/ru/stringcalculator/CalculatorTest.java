@@ -31,8 +31,13 @@ public class CalculatorTest {
     }
 	
 	@Test
+    public void testUnknownAmountofNumbers(){
+    	assertEquals(1+2+3+4+5, Calculator.add("1,2,3,4,5"));
+    }
+	
+	@Test
     public void testNewLines(){
     	assertEquals(6, Calculator.add("1\n2,3"));
     } 
-
+	
 }
