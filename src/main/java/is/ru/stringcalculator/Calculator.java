@@ -37,8 +37,10 @@ public class Calculator {
 			int indexNumber = toInt(number);
 			if (indexNumber < 0)
 				throw new RuntimeException("Negatives not allowed: + negNumber");
-			else
-				total += toInt(number);
+				else if (indexNumber > 1000)
+					continue;
+						else
+							total += toInt(number);
 				
 		}
 		return total;
