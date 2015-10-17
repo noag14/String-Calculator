@@ -46,8 +46,8 @@ public class CalculatorTest {
     } 
 	
 	@Test
--    public void testNegativeNumbers(){
--    	assertEquals("Negatives not allowed: -1","-1,2")
--    }
+	public void testNegativeNumbers(){
+    	assertEquals("Negatives not allowed: -1","-1,2");
+    }
 	
 }
