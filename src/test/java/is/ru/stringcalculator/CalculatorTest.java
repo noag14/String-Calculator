@@ -50,4 +50,9 @@ public class CalculatorTest {
     	assertEquals("Negatives not allowed: -1","-1,2");
     }
 	
+	@Test
+	public void testIfNumberHigherThen1000(){
+		assertEquals(2, Calculator.add("1001,2"));
+	}
+	
 }
