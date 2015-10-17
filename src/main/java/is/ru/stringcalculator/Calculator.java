@@ -1,4 +1,5 @@
 package is.ru.stringcalculator;
+import java.util.ArrayList;
 
 public class Calculator {
 
@@ -28,12 +29,19 @@ public class Calculator {
 		else {
 			return numbers.split(",|n");
 	}
-      
+     
     private static int sum(String[] numbers){
  	    int total = 0;
+		List negNumber = new ArrayList();
         for(String number : numbers){
-		    total += toInt(number);
+			int indexNumber = toInt(number);
+			if (indexNumber < 0)
+				throw new RuntimeException("Negatives not allowed: + negNumber");
+			else
+				total += toInt(number);
+				
 		}
 		return total;
     }
+}
 }
